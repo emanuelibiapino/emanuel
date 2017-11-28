@@ -1,0 +1,105 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	text-decoration: none;
+}
+
+p{
+	text-align: justify;
+	margin: 20px 7px 20px 10px;
+}
+
+.corpo{
+	background-color: #D3D3D3;
+}
+a[href="#top"] {
+    padding: 10px;
+    position: fixed;
+    top: 90%;
+    right: 40px;
+    display: none;
+    font-size: 30px;
+}
+a[href="#top"]:hover {
+    text-decoration: none;
+}
+.cabecalho{
+	width: 100%;
+	height: 200px;
+}
+
+
+.Menu{
+	width:100%;
+	background-color: #1C1917;
+	color: #fff;
+	padding: 0px;
+	text-align: center;
+	margin: 0px;
+	transition: max-height 0.5s;
+}
+
+ul li{
+	display: inline-block;
+	padding: 20px;
+}
+
+ul li a{
+	text-decoration: none;
+	color: white;
+}
+
+ul li a:hover{
+	color: blue;
+}
+
+.pagina{
+	background-color: #1C1917;
+	width: 80%;
+	height: 800px;
+	border-style: groove;
+	border-radius: 5px;
+	margin: auto;
+	margin-top: 5px;
+	padding: 10px;
+}
+
+h1{
+	text-align: center;
+}
+
+.lateral{
+	background-color: #F8F8FF;
+	width: 300px;
+	height: 800px;
+	float: right;
+}
+
+.posts{
+	
+	background-color: #F8F8FF;
+	width: 775px;
+	height: 800px;
+}
+
+.video{
+	margin-top: 5%;
+	margin-left: 13%;
+	margin-bottom: 5%;
+}
+
+.contatos{
+	width:100%;
+	height: 115px;
+	background-color: #1C1917;
+	color: #fff;
+	padding: 0px;
+	text-align: center;
+	margin-top: 5px;
+}
+
+.nomes{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

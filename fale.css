@@ -1,0 +1,129 @@
+
+*{
+	padding: 0px;
+	margin: 0px;
+	text-decoration: none;
+}
+.corpo{
+	background-color: white;
+}
+
+a[href="#top"] {
+    padding: 0px;
+    position: fixed;
+    top: 90%;
+    right: 40px;
+    display: none;
+    font-size: 30px;
+}
+a[href="#top"]:hover {
+    text-decoration: none;
+}
+
+.cabecalho{
+
+	width: 100%;
+	height: 200px;
+
+}
+
+
+.Menu{
+
+	width:100%;
+	background-color: #1C1917;
+	color: #fff;
+	padding: 0px;
+	text-align: center;
+	margin: 0px;
+	transition: max-height 0.5s;
+
+}
+
+ul li{
+
+	display: inline-block;
+	padding: 20px;
+}
+
+ul li a{
+
+	text-decoration: none;
+	color: white;
+}
+ul li a:hover{
+	color: blue;
+}
+.pagina{
+	background-color: white;
+	width: 775px;
+	height: auto;
+	margin: 100px 150px 5px 270px;
+	margin-top: 5px;
+	padding: 20px;
+	border: 3px solid #000;
+}
+
+h2{
+	text-align: center;
+}
+
+.contatos{
+	width:100%;
+	height: 100px;
+	padding: 0px;
+	text-align: center;
+	margin-top: 5px;
+}
+
+.nomes{
+	text-align: center;
+}
+body{
+	font-family:arial;
+}
+
+h1{
+	text-align:center;
+	font-size:20px;
+}
+
+p{
+	text-align:center;
+}
+
+#button{
+	background-color:yellow;
+	font-size:20px;
+	border: 2px solid yellow;
+	border-radius: 12px;
+}
+
+.classe2{
+
+	width: auto;
+	padding: auto;
+}
+
+
+.Central{
+
+	align-items:  center;
+	width:  100%;
+}
+
+.contatos{
+	width:100%;
+	height: 115px;
+	background-color: #1C1917;
+	color: #fff;
+	padding: 0px;
+	text-align: center;
+	margin-top: 5px;
+}
+
+.nomes{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
