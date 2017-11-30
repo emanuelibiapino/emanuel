@@ -5,7 +5,7 @@
 	text-decoration: none;
 }
 .corpo{
-	background-color: white;
+	background-color: #D3D3D3;
 }
 
 a[href="#top"] {
@@ -26,7 +26,6 @@ a[href="#top"]:hover {
 	height: 200px;
 
 }
-
 
 .Menu{
 
@@ -62,6 +61,9 @@ ul li a:hover{
 	margin-top: 5px;
 	padding: 20px;
 	border: 3px solid #000;
+	border-style: groove;
+	border-radius: 5px;
+	border-width: 15px;
 }
 
 h2{
@@ -92,15 +94,7 @@ p{
 	text-align:center;
 }
 
-#button{
-	background-color:yellow;
-	font-size:20px;
-	border: 2px solid yellow;
-	border-radius: 12px;
-}
-
 .classe2{
-
 	width: auto;
 	padding: auto;
 }

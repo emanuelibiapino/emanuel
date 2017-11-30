@@ -2,8 +2,9 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<script type="text/javascript" src = "preciso.js"  ></script>
 	<title>Simulador</title>
+	<script type="text/javascript" src = "preciso.js"></script>
+	<script src="simulador.js"></script>	
 	<link rel="stylesheet" type="text/css" href="simulador.css">
 </head>
 <body class="corpo">
@@ -24,271 +25,320 @@
 	<div class="pagina">
 		<h1>Simulador</h1>
 		<div class="esquerda">
-			<fieldset style="box-shadow: 5px 5px 10px #999;">
-				<legend>Ativo</legend><br><br>
-				<table>
-					<tr>
-						<td><b>ATIVO CIRCULANTE:</b></td>
-					</tr>
+			<form method="post" oninput="">
+				<fieldset style="box-shadow: 5px 5px 10px #999;">
+					<legend>Ativo</legend><br><br>
+					<table>
+						<tr>
+							<td><b>ATIVO CIRCULANTE:<input type="text" name="ac" id="ac" readonly /></b></td>
+						</tr>
 
-					<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
 
-					<tr>
-						<td><b>Disponivel:</b></td>
-					</tr>
-					<tr>
-						<td>Caixa:</td>
-						<td><input type="input" name="contas_receber" id="contas_receber" placeholder="Digite o valor"></td>
-					</tr>
-					<tr>
-						<td>Banco conta movimento:</td>
-						<td><input type="input" name="contas_pagar" id="contas_pagar" placeholder="Digite o valor"></td>
-					</tr>
-					<tr>
-						<td>Aplicações Finançeiras<br> de liquidez imediata</td>
-						<td><input type="input" name="contas_pagar" id="contas_pagar" placeholder="Digite o valor"></td>
-					</tr>
+						<tr>
+							<td><b>Disponivel:<input type="text" name="disponivel" id="disponivel" readonly /></b></td>
+						</tr>
+						<tr>
+							<td>Caixa:</td>
+							<td><input type="input" name="caixa" id="caixa" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
+						</tr>
+						<tr>
+							<td>Banco conta movimento:</td>
+							<td><input type="input" name="banco_movimento" id="banco_movimento" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
+						</tr>
+						<tr>
+							<td>Aplicações Finançeiras<br> de liquidez imediata</td>
+							<td><input type="input" name="afli" id="afli" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
+						</tr>
 
-					<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
 
-					<tr>
-						<td><b>Clientes:</b></td>
-					</tr>
-					<tr>
-						<td>Duplicatas a receber:</td>
-						<td><input type="input" name="contas_pagar" id="contas_pagar" placeholder="Digite o valor"></td>
-					</tr>
+						<tr>
+							<td><b>Clientes:<input type="text" name="clientes" id="clientes" readonly /></b></td>
+						</tr>
+						<tr>
+							<td>Duplicatas a receber:</td>
+							<td><input type="input" name="duplicatas_receber" id="duplicatas_receber" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
+						</tr>
 
-					<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
 
-					<tr>
-						<td><b>Outros créditos:</b></td>
-					</tr>
-					<tr>
-						<td>Adiantamentos e empregados:</td>
-						<td><input type="input" name="contas_pagar" id="contas_pagar" placeholder="Digite o valor"></td>
-					</tr>
+						<tr>
+							<td><b>Outros créditos:<input type="text" name="outros_creditos" id="outros_creditos" readonly /></b></td>
+						</tr>
+						<tr>
+							<td>Adiantamentos e empregados:</td>
+							<td><input type="input" name="adiantamentos_empregados" id="adiantamentos_empregados" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
+						</tr>
 
-					<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
 
-					<tr>
-						<td><b>Tributos a recuperar:</b></td>
-					</tr>
-					<tr>
-						<td>ICMS a recuperar:</td>
-						<td><input type="input" name="contas_pagar" id="contas_pagar" placeholder="Digite o valor"></td>
-					</tr>
+						<tr>
+							<td><b>Tributos a recuperar:<input type="text" name="tributos_recuperar" id="tributos_recuperar" readonly /></b></td>
+						</tr>
+						<tr>
+							<td>ICMS a recuperar:</td>
+							<td><input type="input" name="icms_recuperar" id="icms_recuperar" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
+						</tr>
 
-					<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
 
-					<tr>
-						<td><b>Investimentos temporários<br> a curto prazo:</b></td>
-					</tr>
-					<tr>
-						<td>Ações de outras empresas:</td>
-						<td><input type="input" name="Ações de outras empresas" id="Ações de outras empresas" placeholder="Digite o valor"></td>
-					</tr>
+						<tr>
+							<td><b>Investimentos temporários a curto prazo:<input type="text" name="investimentos_temp" id="investimentos_temp" readonly /></b></td>
+						</tr>
+						<tr>
+							<td>Ações de outras empresas:</td>
+							<td><input type="input" name="acao_outras_empresas" id="acao_outras_empresas" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
+						</tr>
 
-					<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
 
-					<tr>
-						<td><b>Estoques:</b></td>
-					</tr>
-					<tr>
-						<td>Mercadorias para revenda:</td>	
-						<td><input type="input" name="mercadorias para revenda" id="mercadorias para revenda" placeholder="Digite o valor"></td>
-					</tr>
-					<tr>
-						<td>Matérias primas:</td>
-						<td><input type="input" name="materias primas" id="materias primas" placeholder="Digite o valor"></td>
-					</tr>
-					<tr>
-						<td>Almoxarifado:</td>
-						<td><input type="input" name="Almoxarifado" id="Almoxarifado" placeholder="Digite o valor"></td>
-					</tr>
+						<tr>
+							<td><b>Estoques:<input type="text" name="estoques" id="estoques" readonly /></b></td>
+						</tr>
+						<tr>
+							<td>Mercadorias para revenda:</td>	
+							<td><input type="input" name="mercadorias_revenda" id="mercadorias_revenda" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
+						</tr>
+						<tr>
+							<td>Matérias primas:</td>
+							<td><input type="input" name="materias_primas" id="materias_primas" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
+						</tr>
+						<tr>
+							<td>Almoxarifado:</td>
+							<td><input type="input" name="almoxarifado" id="almoxarifado" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
+						</tr>
 
-					<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
 
-					<tr>
-						<td><b>ATIVO NÃO CIRCULANTE:</b></td>
-					</tr>
+						<tr>
+							<td><b>ATIVO NÃO CIRCULANTE:<input type="text" name="anc" id="anc" readonly /></b></td>
+						</tr>
 
-					<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
 
-					<tr>
-						<td><b>Ativo imobilizado:</b></td>
-					</tr>
-					<tr>
-						<td>Moveis e utensílios:</td>
-						<td><input type="input" name="moveis e utensilios" id="moveis e utensilios" placeholder="Digite o valor"></td>
-					</tr>
+						<tr>
+							<td><b>Ativo imobilizado:<input type="text" name="ativo_imobilizado" id="ativo_imobilizado" readonly /></b></td>
+						</tr>
+						<tr>
+							<td>Moveis e utensílios:</td>
+							<td><input type="input" name="moveis_utensilios" id="moveis_utensilios" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
+						</tr>
+						<tr>
+							<td>(-)Depreciação aumulada de móveis e utensilios:</td>
+							<td><input type="input" name="damu" id="damu" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
+						</tr>
+						<tr>
+							<td>instalações:</td>
+							<td><input type="input" name="instalacoes" id="instalacoes" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
+						</tr>
+						<tr>
+							<td>(-)Depreciação acumulada de instalaçoes:</td>
+							<td><input type="input" name="dai" id="dai" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
+						</tr>	
+						
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
 
-					<tr><td>&nbsp</td></tr>
+						<tr>
+							<td><b>Intengivel:<input type="text" name="intangivel" id="intangivel" readonly /></b></td>
+						</tr>
+						<tr>
+							<td>Fundo de comércio:</td>
+							<td><input type="input" name="fundo_comercio" id="fundo_comercio" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
+						</tr>
+						<tr>
+							<td>(-)Amortização de fundo de comércio:</td>
+							<td><input type="input" name="afc" id="afc" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
+						</tr>
 
-					<tr>
-						<td><b>(-)Depreciação aumulada <br>de móveis e utensilios:</b></td>
-					</tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
 
-					<tr><td>&nbsp</td></tr>
+						<tr>
+							<td><b>TOTAL DO ATIVO:<input type="text" name="total_ativo" id="total_ativo" readonly /></b></td>
+						</tr>
 
-					<tr>
-						<td><b>(-)Depreciação acumulada <br>de instalaçoes:</b></td>
-					</tr>	
-					
-					<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
+						<tr><td>&nbsp</td></tr>
 
-					<tr>
-						<td><b>Intengivel:</b></td>
-					</tr>
-					<tr>
-						<td>Fundo de comércio:</td>
-						<td><input type="input" name="fundo de comercio" id="fundo de comercio" placeholder="Digite o valor"></td>
-					</tr>
+					</table>
 
-					<tr><td>&nbsp</td></tr>
-
-					<tr>
-						<td><b>(-)Amortização de<br> fundo de comércio:</b></td>
-					</tr>
-
-					<tr><td>&nbsp</td></tr>
-
-					<tr>
-						<td><b>TOTAL DO ATIVO:</b></td>
-					</tr>
-
-					<tr><td>&nbsp</td></tr>
-
-				</table>
-			</fieldset>
+					<button type="button" onclick="calcular()" onclick="calculoTemp()">Calcular</button>
+				</fieldset>
+			</form>
+				</fieldset>
+			</form>
 		</div>
 		<div class="direita">
 			<fieldset style="box-shadow: 5px 5px 10px #999;">
 				<legend>Passivo</legend><br><br>
 	  			<table>
 					<tr>
-						<td><b>PASSIVO CIRCULANTE:</b></td>
+						<td><b>PASSIVO CIRCULANTE:<input type="text" name="passivo_circulante" id="passivo_circulante" readonly /></b></td>
 					</tr>
 
 					<tr><td>&nbsp</td></tr>
+					<tr><td>&nbsp</td></tr>
+					<tr><td>&nbsp</td></tr>
 
 					<tr>
-						<td><b>Obrigações a fornecedores:</b></td>
+						<td><b>Obrigações a fornecedores:<input type="text" name="obrigacoes_fornecedores" id="obrigacoes_fornecedores" readonly /></b></td>
 					</tr>
 					<tr>
 						<td>Forenecedores nacionais:</td>
-						<td><input type="input" name="fornecedores nacionais" id="fornecedores nacionais" placeholder="Digite o valor"></td>
+						<td><input type="input" name="fornecedores_nacionais" id="fornecedores_nacionais" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
 					</tr>
 					<tr>
 						<td>Fornecedores estrangeiros:</td>
-						<td><input type="input" name="fornecedores estrangeiros" id="fornecedores estrangeiros" placeholder="Digite o valor"></td>
+						<td><input type="input" name="fornecedores_estrangeiros" id="fornecedores_estrangeiros" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
 					</tr>
 
 					<tr><td>&nbsp</td></tr>
+					<tr><td>&nbsp</td></tr>
+					<tr><td>&nbsp</td></tr>
 
 					<tr>
-						<td><b>Emprestimos <br>e financiamentos:</b></td>
+						<td><b>Emprestimos e financiamentos:<input type="text" name="emprestimos_financiamentos" id="emprestimos_financiamentos" readonly /></b></td>
 					</tr>
 					<tr>
 						<td>Emprestimos a pagar:</td>
-						<td><input type="input" name="emprestimos a pagar" id="emprestimos a pagar" placeholder="Digite o valor"></td>
+						<td><input type="input" name="emprestimos_pagar" id="emprestimos_pagar" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
 					</tr>
 
 					<tr><td>&nbsp</td></tr>
+					<tr><td>&nbsp</td></tr>
+					<tr><td>&nbsp</td></tr>
 
 					<tr>
-						<td><b>Tributos a recolher:</b></td>
+						<td><b>Tributos a recolher:<input type="text" name="tributos_recolher" id="tributos_recolher" readonly /></b></td>
 					</tr>
 					<tr>
 						<td>ICMS a recolher:</td>
-						<td><input type="input" name="icms a recolher" id="icms a recolher" placeholder="Digite o valor"></td>
+						<td><input type="input" name="icms_recolher" id="icms_recolher" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
 					</tr>
 
 					<tr><td>&nbsp</td></tr>
+					<tr><td>&nbsp</td></tr>
+					<tr><td>&nbsp</td></tr>
 
 					<tr>
-						<td><b>Obrigações trabalhistas <br>e previdenciarias:</b></td>
+						<td><b>Obrigações trabalhistas e previdenciarias:<input type="text" name="otp" id="otp" readonly /></b></td>
 					</tr>
 					<tr>
 						<td>Salários a pagar:</td>
-						<td><input type="input" name="salarios a pagar" id="salarios a pagar" placeholder="Digite o valor"></td>
+						<td><input type="input" name="salarios_pagar" id="salarios_pagar" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
 					</tr>
 					<tr>
 						<td>INSS a recolher:</td>
-						<td><input type="input" name="inss a reolher" id="inss a recolher" placeholder="Digite o valor"></td>
+						<td><input type="input" name="inss_recolher" id="inss_recolher" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
 					</tr>
 					<tr>
 						<td>FGTS a recolher:</td>	
-						<td><input type="input" name="fgts a recolher" id="fgts a recolher" placeholder="Digite o valor"></td>
+						<td><input type="input" name="fgts_recolher" id="fgts_recolher" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
 					</tr>
 					<tr>
 						<td>Férias a pagar:</td>
-						<td><input type="input" name="ferias a pagar" id="ferias a pagar" placeholder="Digite o valor"></td>
+						<td><input type="input" name="ferias_pagar" id="ferias_pagar" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
 					</tr>
 
 					<tr><td>&nbsp</td></tr>
+					<tr><td>&nbsp</td></tr>
+					<tr><td>&nbsp</td></tr>
 
 					<tr>
-						<td><b>participações e destinações <br>do lucro liquido:</b></td>
+						<td><b>participações e destinações do lucro liquido:<input type="text" name="pdll" id="pdll" readonly /></b></td>
 					</tr>
 					<tr>
 						<td>Dividendos a pagar:</td>
-						<td><input type="input" name="Dividendos a pagar" id="Dividendos a pagar" placeholder="Digite o valor"></td>
+						<td><input type="input" name="dividendos_pagar" id="dividendos_pagar" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
 					</tr>
 
 					<tr><td>&nbsp</td></tr>
+					<tr><td>&nbsp</td></tr>
+					<tr><td>&nbsp</td></tr>
 
 					<tr>
-						<td><b>Outras obrigações:</b></td>
+						<td><b>Outras obrigações:<input type="text" name="outras_obrigacoes" id="outras_obrigacoes" readonly /></b></td>
 					</tr>
 					<tr>
 						<td>Contas a pagar:</td>
-						<td><input type="input" name="contas a pagar" id="contas a pagar" placeholder="Digite o valor"></td>
+						<td><input type="input" name="contas_pagar" id="contas_pagar" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
 					</tr>
 
 					<tr><td>&nbsp</td></tr>
-
-					<tr>
-						<td><b>PATRIMONIO LIQUIDO:</b></td>
-					</tr>
-
+					<tr><td>&nbsp</td></tr>
 					<tr><td>&nbsp</td></tr>
 
 					<tr>
-						<td><b>Capital social:</b></td>
+						<td><b>Patrimonio liquido:<input type="text" name="patrimonio_liquido" id="patrimonio_liquido" readonly /></b></td>
+					</tr>
+
+					<tr><td>&nbsp</td></tr>
+					<tr><td>&nbsp</td></tr>
+					<tr><td>&nbsp</td></tr>
+
+					<tr>
+						<td><b>Capital social:<input type="text" name="capital_social" id="capital_social" readonly /></b></td>
 					</tr>
 					<tr>
 						<td>Capital integralizado:</td>
-						<td><input type="input" name="Capital integralizado" id="capital integralizado" placeholder="Digite o valor"></td>
+						<td><input type="input" name="Capital_integralizado" id="capital_integralizado" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
 					</tr>
 
 					<tr><td>&nbsp</td></tr>
+					<tr><td>&nbsp</td></tr>
+					<tr><td>&nbsp</td></tr>
 
 					<tr>
-						<td><b>Reservas de capital:</b></td>
+						<td><b>Reservas de capital:<input type="text" name="reservas_capital" id="reservas_capital" readonly /></b></td>
 					</tr>
 					<tr>
-						<td>Reserva de correção <br>do capital social:</td>
-						<td><input type="input" name="reserva de correção" id="reserva de correção" placeholder="Digite o valor"></td>
+						<td>Reserva de correção do capital social:</td>
+						<td><input type="input" name="rcmcs" id="rcmcs" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
 					</tr>
 					<tr>
 						<td>Reserva de lucros:</td>
-						<td><input type="input" name="reserva de lucros" id="reserva de lucros" placeholder="Digite o valor"></td>
+						<td><input type="input" name="reserva_lucros" id="reserva_lucros" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
 					</tr>
 					<tr>
 						<td>Reserva de lucros a realizar:</td>
-						<td><input type="input" name="reserva de lucros a realizar" id="reserva de lucros a realizar" placeholder="Digite o valor"></td>
+						<td><input type="input" name="reserva_lucros_realizar" id="reserva_lucros_realizar" placeholder="Digite o valor" required value="" pattern="[0-9]+$" title="Este campo não pode conter letras"></td>
 					</tr>
 
 					<tr><td>&nbsp</td></tr>
+					<tr><td>&nbsp</td></tr>
+					<tr><td>&nbsp</td></tr>
 
 					<tr>
-						<td><b>TOTAL DO PASSIVO:</b></td>
+						<td><b>TOTAL DO PASSIVO:<input type="text" name="total_passivo" id="total_passivo" readonly /></b></td>
 					</tr>
 
 					<tr><td>&nbsp</td></tr>
 					
 				</table>
+
+				<button type="button" onclick="calcular1()">Calcular</button>
+
 			</fieldset>
 		</div>		
 	</div>
@@ -297,6 +347,5 @@
 			<p class="nomes">Emanuel Ibiapino<br>Camila Catiely<br>Orrana Lhaynher<br>Walef Alves</p>
 	</div>
 	<a href="#top" class="glyphicon glyphicon-chevron-up"><img alt="" width="60" height="60" src="topo.png" ></a>
-   <script src="simulador.js" type="text/javascript"></script>
 </body>
 </html>

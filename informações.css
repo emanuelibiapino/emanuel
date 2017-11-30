@@ -7,6 +7,10 @@
 p{
 	text-align: justify;
 	margin: 20px 7px 20px 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-indent: 50px;
+	font-size: 17px;
 }
 
 .corpo{
@@ -56,12 +60,17 @@ h1{
 	text-align: center;
 }
 
+h2{
+	text-align: center;
+}
+
 .pagina{
 	background-color: white;
 	width: 80%;
 	height: auto;
 	border-style: groove;
 	border-radius: 5px;
+	border-width: 15px;
 	margin: auto;
 	margin-top: 5px;
 	padding-top: 50px;

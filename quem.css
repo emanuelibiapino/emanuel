@@ -8,10 +8,11 @@
 p{
 	text-align: justify;
 	margin: 20px 7px 20px 10px;
+	font-size: 17px;
 }
 
 .corpo{
-	background-color: white;
+	background-color: #D3D3D3;
 }
 
 .cabecalho{
@@ -52,10 +53,13 @@ ul li a:hover{
 	background-color: white;
 	width: 775px;
 	height: 400px;
+	border-style: groove;
+    border-radius: 5px;
+    border-width: 15px;
 	margin: auto;
 	margin-top: 5px;
 	padding: 20px;
-	border: 3px solid #000;
+
 }
 h1{
 	text-align: center;
