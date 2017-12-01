@@ -7,26 +7,14 @@
 p{
 	text-align: justify;
 	margin: 20px 7px 20px 10px;
-	padding-left: 20px;
-	padding-right: 20px;
-	text-indent: 50px;
+	padding: 20px;
 	font-size: 17px;
 }
 
 .corpo{
 	background-color: #D3D3D3;
 }
-a[href="#top"] {
-    padding: 0px;
-    position: fixed;
-    top: 90%;
-    right: 40px;
-    display: none;
-    font-size: 30px;
-}
-a[href="#top"]:hover {
-    text-decoration: none;
-}
+
 .cabecalho{
 	width: 100%;
 	height: 200px;
@@ -64,6 +52,10 @@ h2{
 	text-align: center;
 }
 
+.link{
+	text-align: center;
+}
+
 .pagina{
 	background-color: white;
 	width: 80%;
@@ -78,7 +70,6 @@ h2{
 
 .quadro{
 	width: 75%;
-
 	margin-right: 150px;
 	margin-left: 150px;
 }
@@ -89,7 +80,7 @@ h2{
 
 .contatos{
 	width:100%;
-	height: 115px;
+	height: 170px;
 	background-color: #1C1917;
 	color: #fff;
 	padding: 0px;

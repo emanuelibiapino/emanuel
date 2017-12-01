@@ -8,24 +8,13 @@
 	background-color: #D3D3D3;
 }
 
-a[href="#top"] {
-    padding: 0px;
-    position: fixed;
-    top: 90%;
-    right: 40px;
-    display: none;
-    font-size: 30px;
-}
-a[href="#top"]:hover {
-    text-decoration: none;
-}
-
 .cabecalho{
 
 	width: 100%;
 	height: 200px;
 
 }
+
 
 .Menu{
 
@@ -94,9 +83,15 @@ p{
 	text-align:center;
 }
 
+#button{
+	font-size:20px;
+	border: 2px solid yellow;
+	border-radius: 12px;
+	
+}
+
 .classe2{
 	width: auto;
-	padding: auto;
 }
 
 
@@ -120,4 +115,6 @@ p{
 	text-align: center;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	font-family: arial;
+	font-size: 17px;
 }

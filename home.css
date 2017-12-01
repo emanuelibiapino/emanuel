@@ -61,7 +61,8 @@ ul li a:hover{
 	width: 80%;
 	height: 800px;
 	border-style: groove;
-	border-radius: 5px;
+    border-radius: 5px;
+    border-width: 10px;
 	margin: auto;
 	margin-top: 5px;
 	padding: 10px;
